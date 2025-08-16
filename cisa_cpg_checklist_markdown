@@ -1,0 +1,188 @@
+# CISA Cross-Sector Cybersecurity Performance Goals (CPG) Checklist
+
+Version: 1.0.1  
+Source: [cisa_cpg_checklist_v1.0.1_final.pdf]  
+Last Updated: 2023  
+Maintained by: [Organization Name] 
+
+---
+
+## Legend
+- [ ] Not Started
+- [~] Scoped / Planned
+- [/] In Progress
+- [x] Implemented
+
+---
+
+## 1. IDENTIFY
+
+### 1.A Asset Inventory
+- [ ] Maintain a regularly updated inventory of all IT and OT assets with IP addresses (including IPv6).  
+- [ ] Update inventory at least monthly.  
+- [ ] Use Cyber Hygiene Services and “Stuff Off Search” guide.  
+
+### 1.B Organizational Cybersecurity Leadership
+- [ ] Identify a named role accountable for cybersecurity planning, resourcing, and execution.  
+- [ ] Ensure role includes budget/resource authority and strategy leadership.  
+
+### 1.C OT Cybersecurity Leadership
+- [ ] Identify role accountable for OT-specific cybersecurity activities.  
+
+### 1.D Improving IT and OT Cybersecurity Relationships
+- [ ] Sponsor at least one social event annually to strengthen IT/OT security collaboration.  
+
+### 1.E Mitigating Known Vulnerabilities
+- [ ] Patch all KEV catalog vulnerabilities on internet-facing systems within risk-informed timelines.  
+- [ ] Apply compensating controls if patching is not possible (segmentation, monitoring).  
+
+### 1.F Third-Party Validation of Controls
+- [ ] Engage external experts to validate effectiveness of IT/OT cybersecurity defenses.  
+- [ ] Include penetration tests, bug bounties, incident simulations, and table-tops.  
+- [ ] Mitigate high-impact findings promptly.  
+
+### 1.G Supply Chain Incident Reporting
+- [ ] Require vendors/service providers to notify of incidents in procurement contracts.  
+
+### 1.H Supply Chain Vulnerability Disclosure
+- [ ] Require vendors/service providers to notify of confirmed vulnerabilities within agreed timeframe.  
+
+### 1.I Vendor/Supplier Cybersecurity Requirements
+- [ ] Include cybersecurity criteria in procurement documents and use them in vendor selection.  
+
+---
+
+## 2. PROTECT
+
+### 2.A Changing Default Passwords
+- [ ] Enforce policy requiring default manufacturer passwords changed before deployment.  
+- [ ] Document compensating controls where default cannot be changed.  
+
+### 2.B Minimum Password Strength
+- [ ] Require minimum password length of 15+ characters.  
+- [ ] Use passphrases/password managers.  
+- [ ] Apply compensating controls if not technically feasible.  
+
+### 2.C Unique Credentials
+- [ ] Ensure all services/accounts use unique credentials.  
+
+### 2.D Revoking Credentials for Departing Employees
+- [ ] Revoke badges/tokens and disable all accounts by departure day.  
+
+### 2.E Separating User and Privileged Accounts
+- [ ] Require administrators to use separate user and admin accounts.  
+- [ ] Revalidate privileges on a recurring basis.  
+
+### 2.F Network Segmentation
+- [ ] Deny OT network connections by default; only allow explicitly approved connections.  
+- [ ] Route IT/OT communications through controlled intermediaries (firewall, bastion, DMZ).  
+
+### 2.G Detection of Failed Login Attempts
+- [ ] Log unsuccessful logins and alert security team after repeated failures.  
+- [ ] Lock suspicious accounts per system-enforced policy.  
+
+### 2.H Phishing-Resistant MFA
+- [ ] Implement strongest MFA method available (prefer hardware-based, e.g., FIDO).  
+- [ ] Apply MFA to all IT accounts, prioritizing privileged accounts.  
+- [ ] Require MFA for remotely accessible OT systems.  
+
+### 2.I Basic Cybersecurity Training
+- [ ] Conduct annual cybersecurity awareness training for all staff.  
+- [ ] Provide training to new employees within 10 days of onboarding.  
+
+### 2.J OT Cybersecurity Training
+- [ ] Provide annual OT-specific cybersecurity training for staff managing OT systems.  
+
+### 2.K Strong and Agile Encryption
+- [ ] Use up-to-date TLS for data in transit.  
+- [ ] Replace outdated encryption algorithms.  
+- [ ] Consider post-quantum crypto readiness.  
+
+### 2.L Secure Sensitive Data
+- [ ] Store credentials securely (vault/manager).  
+- [ ] Prohibit plaintext storage of sensitive data.  
+
+### 2.M Email Security
+- [ ] Enable STARTTLS, SPF, DKIM, and DMARC (reject).  
+
+### 2.N Disable Macros by Default
+- [ ] Enforce disabling of Office macros by default; exceptions must be documented.  
+
+### 2.O Document Device Configurations
+- [ ] Maintain baseline and current configuration documentation of IT/OT assets.  
+- [ ] Review and update regularly.  
+
+### 2.P Document Network Topology
+- [ ] Maintain accurate IT/OT network diagrams; review/update regularly.  
+
+### 2.Q Hardware & Software Approval Process
+- [ ] Implement approval process for new hardware/software deployments.  
+- [ ] Maintain allowlist of approved versions.  
+
+### 2.R System Backups
+- [ ] Perform and test backups at least annually.  
+- [ ] Store backups separately; include OT configs, PLC logic, drawings, tools.  
+
+### 2.S Incident Response Plans
+- [ ] Maintain and annually test IT/OT IR plans.  
+- [ ] Update IR plans after incidents and exercises.  
+
+### 2.T Log Collection
+- [ ] Collect and store access/security logs (firewall, IDS, VPN, etc.).  
+- [ ] Collect network traffic for OT assets without logs.  
+
+### 2.U Secure Log Storage
+- [ ] Store logs centrally (SIEM/database).  
+- [ ] Restrict access and retain per regulatory/risk guidance.  
+
+### 2.V Prohibit Unauthorized Devices
+- [ ] Enforce policies prohibiting unauthorized hardware/media.  
+- [ ] Secure/remove unused OT physical ports.  
+
+### 2.W No Exploitable Services on Internet
+- [ ] Disable unnecessary services on internet-facing assets.  
+- [ ] Apply compensating controls where services must be exposed.  
+
+### 2.X Limit OT Connections to Public Internet
+- [ ] Prohibit OT assets on public internet unless explicitly required.  
+- [ ] Apply additional protections to exceptions.  
+
+---
+
+## 3. DETECT
+
+### 3.A Detecting Relevant Threats/TTPs
+- [ ] Maintain documented list of relevant threats/TTPs.  
+- [ ] Ensure ability to detect key threats with rules/alerts/tools.  
+
+---
+
+## 4. RESPOND
+
+### 4.A Incident Reporting
+- [ ] Maintain policy defining incident reporting processes to regulators, ISACs, CISA.  
+- [ ] Report incidents promptly per regulatory guidance.  
+
+### 4.B Vulnerability Disclosure/Reporting
+- [ ] Provide discoverable method for researchers to report vulnerabilities.  
+- [ ] Acknowledge valid submissions and mitigate appropriately.  
+- [ ] Protect researchers under Safe Harbor.  
+
+### 4.C Deploy Security.txt
+- [ ] Place RFC 9116-compliant `security.txt` on all public web domains.  
+
+---
+
+## 5. RECOVER
+
+### 5.A Incident Planning & Preparedness
+- [ ] Develop, maintain, and test recovery plans for mission-critical systems.  
+
+---
+
+## Sign-Off
+
+- [ ] Technical Review — NAME / DATE  
+- [ ] Security Review — NAME / DATE  
+- [ ] Compliance Review — NAME / DATE  
+- [ ] Executive Sponsor — NAME / DATE 
