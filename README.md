@@ -1,11 +1,23 @@
 # Security Resources
 
-This repository contains curated security resources, templates, and checklists to support organizations in strengthening their cybersecurity posture.  
+Practical, curated security resources to help organizations strengthen cyber resilience across IT and OT environments. This repository turns well-known guidance into usable artifacts that teams can adopt, track, and operationalize.
 
-Included materials provide actionable, standards-aligned practices for IT and OT environments, such as:  
+## What you will find here
 
-- **CISA Cross-Sector Cybersecurity Performance Goals (CPG) Checklist** — a structured, web-based checklist version of CISA’s official framework to help track implementation of key security controls.  
-- **Issue Templates** for GitHub — enabling teams to operationalize security checklists directly in project workflows.  
-- **Supporting References** to free services, guidance, and tools from CISA and other trusted sources.  
+- **CISA Cross-Sector Cybersecurity Performance Goals (CPG) Checklist** — a structured, web-based checklist aligned to the official CISA framework to help track implementation of key controls.
+- **GitHub Issue Templates** — ready-to-use templates that translate checklist items into actionable work.
+- **Supporting References** — links to free services, guidance, and tools from CISA and other trusted sources.
 
-The goal of this repository is to make it easier to adopt practical, repeatable, and measurable security practices across diverse organizations. Contributions and pull requests to extend or refine these resources are welcome.  
+## How to use
+
+1. Review the CPG checklist to assess current coverage.
+2. Turn gaps into issues using the provided templates.
+3. Track progress, measure improvements, and iterate.
+
+## Who this is for
+
+Security leaders, program managers, and engineering teams looking for practical, repeatable ways to prioritize and measure security outcomes.
+
+## Contributing
+
+Contributions and pull requests are welcome. If you have ideas for new checklists, templates, or reference material, please open an issue or submit a PR.
