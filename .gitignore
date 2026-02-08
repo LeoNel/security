@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Editor files
+.vs/
+*.suo
+*.user
+*.swp
+*~
+
+# Credentials and secrets
+*.credentials
+*.secret
+*.key
+*.pem
+*.pfx
+.env
+
+# Logs
+*.log
