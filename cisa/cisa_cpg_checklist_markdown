@@ -1,188 +1,303 @@
 # CISA Cross-Sector Cybersecurity Performance Goals (CPG) Checklist
 
-Version: 1.0.1  
-Source: [CISA Cybersecurity Performance Goals (CPG) Checklist](https://www.cisa.gov/sites/default/files/2023-03/cisa_cpg_checklist_v1.0.1_final.pdf)
-Last Updated: 2023  
-Maintained by: [Organization Name] 
+Version: 2.0 draft preview  
+Source: [CISA Cybersecurity Performance Goals 2.0](https://www.cisa.gov/cybersecurity-performance-goals-2-0-cpg-2-0)  
+Companion source: [CISA Cybersecurity Performance Goals](https://www.cisa.gov/cybersecurity-performance-goals)  
+Last Reviewed: 2026-08-30  
+Maintained by: Repository maintainers
+
+---
+
+## Version 2.0 Update Notes
+
+This checklist is organized around the NIST Cybersecurity Framework 2.0 functions:
+
+1. Govern
+2. Identify
+3. Protect
+4. Detect
+5. Respond
+6. Recover
+
+CPG 2.0 emphasizes governance, accountability, managed service provider risk, least privilege, malicious code detection, adverse event identification, and incident communication procedures.
+
+The following prior standalone goals have been removed from this checklist because CPG 2.0 reporting indicates that their outcomes were folded into broader goals:
+
+- Vendor/Supplier Cybersecurity Requirements
+- Detecting Relevant Threats and TTPs
+- Deploy Security.txt Files
 
 ---
 
 ## Legend
+
 - [ ] Not Started
-- [~] Scoped / Planned
-- [/] In Progress
-- [x] Implemented
+- [ ] Scoped / Planned
+- [ ] In Progress
+- [ ] Implemented
+- [ ] Not Applicable
+- [ ] Risk Accepted
+
+Use the checkbox next to each item for quick GitHub task tracking. Record the selected status, owner, evidence, and due date in the notes area for operational use.
 
 ---
 
-## 1. IDENTIFY
+## 1. GOVERN
 
-### 1.A Asset Inventory
-- [ ] Maintain a regularly updated inventory of all IT and OT assets with IP addresses (including IPv6).  
-- [ ] Update inventory at least monthly.  
-- [ ] Use Cyber Hygiene Services and “Stuff Off Search” guide.  
+### 1.A Manage Cybersecurity Leadership
 
-### 1.B Organizational Cybersecurity Leadership
-- [ ] Identify a named role accountable for cybersecurity planning, resourcing, and execution.  
-- [ ] Ensure role includes budget/resource authority and strategy leadership.  
+- [ ] Identify a named role accountable for cybersecurity planning, resourcing, execution, and program improvement.
+- [ ] Ensure the accountable role has authority to escalate risk, request resources, and coordinate across IT, OT, business, legal, privacy, and executive stakeholders.
+- [ ] Document cybersecurity roles and responsibilities for system owners, business owners, administrators, incident responders, and leadership.
 
-### 1.C OT Cybersecurity Leadership
-- [ ] Identify role accountable for OT-specific cybersecurity activities.  
+### 1.B Manage Cybersecurity Oversight
 
-### 1.D Improving IT and OT Cybersecurity Relationships
-- [ ] Sponsor at least one social event annually to strengthen IT/OT security collaboration.  
+- [ ] Establish recurring leadership oversight of cybersecurity risk, program performance, major incidents, accepted risks, and remediation progress.
+- [ ] Report cybersecurity priorities and material risks to executive leadership or the board on a defined cadence.
+- [ ] Track decisions, exceptions, funding needs, and unresolved risks in a durable governance record.
 
-### 1.E Mitigating Known Vulnerabilities
-- [ ] Patch all KEV catalog vulnerabilities on internet-facing systems within risk-informed timelines.  
-- [ ] Apply compensating controls if patching is not possible (segmentation, monitoring).  
+### 1.C Improve IT, OT, and Business Cybersecurity Relationships
 
-### 1.F Third-Party Validation of Controls
-- [ ] Engage external experts to validate effectiveness of IT/OT cybersecurity defenses.  
-- [ ] Include penetration tests, bug bounties, incident simulations, and table-tops.  
-- [ ] Mitigate high-impact findings promptly.  
+- [ ] Establish regular coordination between IT, OT, security, privacy, legal, compliance, operations, and business teams.
+- [ ] Include OT and operational stakeholders in cybersecurity planning, incident response, recovery planning, and change management where applicable.
+- [ ] Define escalation paths for cyber risks that may affect safety, service delivery, legal obligations, or critical operations.
 
-### 1.G Supply Chain Incident Reporting
-- [ ] Require vendors/service providers to notify of incidents in procurement contracts.  
+### 1.D Validate Cybersecurity Controls
 
-### 1.H Supply Chain Vulnerability Disclosure
-- [ ] Require vendors/service providers to notify of confirmed vulnerabilities within agreed timeframe.  
+- [ ] Periodically validate the effectiveness of cybersecurity defenses through testing, assessment, tabletop exercises, penetration testing, red teaming, or independent review.
+- [ ] Track high-impact findings through remediation or documented risk acceptance.
+- [ ] Reassess control effectiveness after significant incidents, technology changes, or architecture changes.
 
-### 1.I Vendor/Supplier Cybersecurity Requirements
-- [ ] Include cybersecurity criteria in procurement documents and use them in vendor selection.  
+### 1.E Manage Risks from Managed Service Providers
+
+- [ ] Maintain an inventory of managed service providers, managed security service providers, cloud administrators, remote support vendors, and other third parties with privileged or operational access.
+- [ ] Require managed service providers to use strong authentication, least privilege, secure remote access, logging, and timely incident notification.
+- [ ] Review provider access, security responsibilities, and incident response dependencies on a recurring cadence.
 
 ---
 
-## 2. PROTECT
+## 2. IDENTIFY
 
-### 2.A Changing Default Passwords
-- [ ] Enforce policy requiring default manufacturer passwords changed before deployment.  
-- [ ] Document compensating controls where default cannot be changed.  
+### 2.A Maintain Asset Inventory
 
-### 2.B Minimum Password Strength
-- [ ] Require minimum password length of 15+ characters.  
-- [ ] Use passphrases/password managers.  
-- [ ] Apply compensating controls if not technically feasible.  
+- [ ] Maintain a regularly updated inventory of IT, OT, cloud, SaaS, network, and internet-facing assets.
+- [ ] Include asset owner, business function, network location, criticality, software/firmware where practical, and exposure status.
+- [ ] Update the inventory on a recurring basis and after material technology or environment changes.
 
-### 2.C Unique Credentials
-- [ ] Ensure all services/accounts use unique credentials.  
+### 2.B Identify Critical Services and Dependencies
 
-### 2.D Revoking Credentials for Departing Employees
-- [ ] Revoke badges/tokens and disable all accounts by departure day.  
+- [ ] Identify mission-critical business services, supporting systems, vendors, facilities, identities, data, and operational dependencies.
+- [ ] Document recovery priorities, operational impact, and responsible owners for critical services.
 
-### 2.E Separating User and Privileged Accounts
-- [ ] Require administrators to use separate user and admin accounts.  
-- [ ] Revalidate privileges on a recurring basis.  
+### 2.C Identify Internet-Exposed Assets and Services
 
-### 2.F Network Segmentation
-- [ ] Deny OT network connections by default; only allow explicitly approved connections.  
-- [ ] Route IT/OT communications through controlled intermediaries (firewall, bastion, DMZ).  
+- [ ] Maintain a current view of public internet-facing systems, applications, remote access paths, APIs, and administrative interfaces.
+- [ ] Remove or restrict internet exposure that is not required for business or operational needs.
+- [ ] Apply compensating controls for required exposed services, including strong authentication, patching, monitoring, and access restrictions.
 
-### 2.G Detection of Failed Login Attempts
-- [ ] Log unsuccessful logins and alert security team after repeated failures.  
-- [ ] Lock suspicious accounts per system-enforced policy.  
+### 2.D Mitigate Known Exploited Vulnerabilities
 
-### 2.H Phishing-Resistant MFA
-- [ ] Implement strongest MFA method available (prefer hardware-based, e.g., FIDO).  
-- [ ] Apply MFA to all IT accounts, prioritizing privileged accounts.  
-- [ ] Require MFA for remotely accessible OT systems.  
+- [ ] Track CISA Known Exploited Vulnerabilities and other high-priority vulnerabilities affecting in-scope systems.
+- [ ] Patch or mitigate known exploited vulnerabilities on internet-facing and critical systems using risk-informed timelines.
+- [ ] Document compensating controls when patching is not technically feasible.
 
-### 2.I Basic Cybersecurity Training
-- [ ] Conduct annual cybersecurity awareness training for all staff.  
-- [ ] Provide training to new employees within 10 days of onboarding.  
+### 2.E Maintain Secure Configuration Documentation
 
-### 2.J OT Cybersecurity Training
-- [ ] Provide annual OT-specific cybersecurity training for staff managing OT systems.  
+- [ ] Maintain baseline and current configuration documentation for important IT, OT, cloud, and network assets.
+- [ ] Review configuration documentation on a recurring cadence and after significant changes.
+- [ ] Record approved deviations from baseline configurations.
 
-### 2.K Strong and Agile Encryption
-- [ ] Use up-to-date TLS for data in transit.  
-- [ ] Replace outdated encryption algorithms.  
-- [ ] Consider post-quantum crypto readiness.  
+### 2.F Maintain Network Topology Documentation
 
-### 2.L Secure Sensitive Data
-- [ ] Store credentials securely (vault/manager).  
-- [ ] Prohibit plaintext storage of sensitive data.  
-
-### 2.M Email Security
-- [ ] Enable STARTTLS, SPF, DKIM, and DMARC (reject).  
-
-### 2.N Disable Macros by Default
-- [ ] Enforce disabling of Office macros by default; exceptions must be documented.  
-
-### 2.O Document Device Configurations
-- [ ] Maintain baseline and current configuration documentation of IT/OT assets.  
-- [ ] Review and update regularly.  
-
-### 2.P Document Network Topology
-- [ ] Maintain accurate IT/OT network diagrams; review/update regularly.  
-
-### 2.Q Hardware & Software Approval Process
-- [ ] Implement approval process for new hardware/software deployments.  
-- [ ] Maintain allowlist of approved versions.  
-
-### 2.R System Backups
-- [ ] Perform and test backups at least annually.  
-- [ ] Store backups separately; include OT configs, PLC logic, drawings, tools.  
-
-### 2.S Incident Response Plans
-- [ ] Maintain and annually test IT/OT IR plans.  
-- [ ] Update IR plans after incidents and exercises.  
-
-### 2.T Log Collection
-- [ ] Collect and store access/security logs (firewall, IDS, VPN, etc.).  
-- [ ] Collect network traffic for OT assets without logs.  
-
-### 2.U Secure Log Storage
-- [ ] Store logs centrally (SIEM/database).  
-- [ ] Restrict access and retain per regulatory/risk guidance.  
-
-### 2.V Prohibit Unauthorized Devices
-- [ ] Enforce policies prohibiting unauthorized hardware/media.  
-- [ ] Secure/remove unused OT physical ports.  
-
-### 2.W No Exploitable Services on Internet
-- [ ] Disable unnecessary services on internet-facing assets.  
-- [ ] Apply compensating controls where services must be exposed.  
-
-### 2.X Limit OT Connections to Public Internet
-- [ ] Prohibit OT assets on public internet unless explicitly required.  
-- [ ] Apply additional protections to exceptions.  
+- [ ] Maintain accurate network diagrams for IT, OT, cloud, remote access, and third-party connectivity.
+- [ ] Identify trust boundaries, segmentation points, externally reachable services, and critical communication paths.
+- [ ] Review diagrams regularly and after architecture or vendor access changes.
 
 ---
 
-## 3. DETECT
+## 3. PROTECT
 
-### 3.A Detecting Relevant Threats/TTPs
-- [ ] Maintain documented list of relevant threats/TTPs.  
-- [ ] Ensure ability to detect key threats with rules/alerts/tools.  
+### 3.A Change Default Passwords
+
+- [ ] Require default manufacturer, vendor, or installation passwords to be changed before production use.
+- [ ] Document compensating controls where default credentials cannot be changed.
+- [ ] Include IT, OT, network, cloud, software, firmware, and appliance credentials in scope.
+
+### 3.B Enforce Minimum Password Strength
+
+- [ ] Require strong passwords or passphrases, including a minimum password length of 15 or more characters where technically feasible.
+- [ ] Use password managers or equivalent controls to support unique, strong credentials.
+- [ ] Apply compensating controls for systems that cannot support the minimum password standard.
+
+### 3.C Use Unique Credentials
+
+- [ ] Ensure users, administrators, services, applications, and devices use unique credentials where technically feasible.
+- [ ] Prohibit shared accounts except where formally approved, monitored, and documented.
+
+### 3.D Revoke Credentials for Departing Personnel
+
+- [ ] Disable accounts, badges, tokens, remote access, and privileged access by the user departure date.
+- [ ] Include employees, contractors, vendors, temporary staff, service accounts, and emergency access accounts in review processes.
+
+### 3.E Separate User and Privileged Accounts
+
+- [ ] Require administrators to use separate standard-user and privileged accounts.
+- [ ] Prohibit routine productivity, email, and web browsing from privileged accounts.
+- [ ] Revalidate privileged access on a recurring basis.
+
+### 3.F Segment Networks
+
+- [ ] Segment user, server, administrative, guest, cloud, third-party, and OT networks based on risk and operational need.
+- [ ] Deny unnecessary traffic by default and allow only approved communication paths.
+- [ ] Route IT/OT communications through controlled intermediaries such as firewalls, jump hosts, bastions, or DMZs.
+
+### 3.G Detect and Limit Failed Login Attempts
+
+- [ ] Log unsuccessful authentication attempts for important systems and remote access paths.
+- [ ] Alert on repeated failed login attempts, suspicious authentication patterns, and credential stuffing indicators.
+- [ ] Lock, throttle, or otherwise protect accounts based on documented policy.
+
+### 3.H Implement the Principles of Least Privilege
+
+- [ ] Grant users, administrators, applications, services, and vendors only the access needed to perform approved duties.
+- [ ] Review privileged, sensitive, and third-party access on a recurring cadence.
+- [ ] Remove standing access when just-in-time access, approval workflows, or time-bound access can reasonably reduce risk.
+
+### 3.I Use Phishing-Resistant Multifactor Authentication
+
+- [ ] Implement phishing-resistant multifactor authentication where supported, prioritizing privileged users, remote access, cloud administration, and critical systems.
+- [ ] Prefer FIDO, WebAuthn, certificate-based, or equivalent phishing-resistant methods where feasible.
+- [ ] Document fallback MFA methods and compensating controls where phishing-resistant MFA is not feasible.
+
+### 3.J Provide Basic Cybersecurity Training
+
+- [ ] Provide cybersecurity awareness training for all workforce members at onboarding and at least annually.
+- [ ] Include phishing, suspicious activity reporting, password hygiene, data handling, remote work, and incident reporting.
+
+### 3.K Use Strong and Agile Encryption
+
+- [ ] Use current, approved encryption for sensitive data in transit and at rest where supported.
+- [ ] Remove or replace deprecated protocols, weak algorithms, and insecure cryptographic configurations.
+- [ ] Track systems that require compensating controls or modernization due to cryptographic limitations.
+
+### 3.L Secure Sensitive Data
+
+- [ ] Identify sensitive data, credentials, secrets, keys, personal information, and regulated information.
+- [ ] Store credentials and secrets in secure vaults or approved secret-management systems.
+- [ ] Restrict plaintext storage, uncontrolled sharing, and excessive retention of sensitive data.
+
+### 3.M Protect Email and Messaging
+
+- [ ] Implement email authentication and transport protections such as SPF, DKIM, DMARC, and STARTTLS where applicable.
+- [ ] Configure phishing, malware, impersonation, and suspicious attachment protections.
+- [ ] Review exceptions and monitor spoofing or domain-abuse indicators.
+
+### 3.N Disable Macros by Default
+
+- [ ] Disable macros from untrusted sources by default.
+- [ ] Document authorized macro exceptions and limit them to approved users, files, and business needs.
+
+### 3.O Require Hardware and Software Approval
+
+- [ ] Maintain an approval process for new hardware, software, cloud services, SaaS tools, firmware, and OT technology.
+- [ ] Maintain an allowlist or approved inventory where feasible.
+- [ ] Remove, block, or investigate unauthorized technology.
+
+### 3.P Maintain and Test Backups
+
+- [ ] Perform backups for critical systems, data, configurations, SaaS repositories, OT engineering artifacts, and recovery documentation.
+- [ ] Store backups separately from production environments and protect them from unauthorized alteration or deletion.
+- [ ] Test restoration on a recurring cadence and document results.
+
+### 3.Q Prohibit Unauthorized Devices and Media
+
+- [ ] Maintain policies and technical controls that restrict unauthorized hardware, removable media, and unmanaged devices.
+- [ ] Disable, monitor, or physically secure ports where feasible, especially in sensitive IT and OT environments.
+- [ ] Define an exception process for approved operational needs.
+
+### 3.R Reduce Exploitable Internet-Facing Services
+
+- [ ] Disable unnecessary services on internet-facing systems.
+- [ ] Restrict exposed administrative interfaces, remote access services, and legacy protocols.
+- [ ] Apply additional protections for services that must remain exposed, including MFA, patching, logging, and access controls.
 
 ---
 
-## 4. RESPOND
+## 4. DETECT
 
-### 4.A Incident Reporting
-- [ ] Maintain policy defining incident reporting processes to regulators, ISACs, CISA.  
-- [ ] Report incidents promptly per regulatory guidance.  
+### 4.A Establish Malicious Code Detection
 
-### 4.B Vulnerability Disclosure/Reporting
-- [ ] Provide discoverable method for researchers to report vulnerabilities.  
-- [ ] Acknowledge valid submissions and mitigate appropriately.  
-- [ ] Protect researchers under Safe Harbor.  
+- [ ] Deploy malicious code detection, prevention, or alerting capabilities on endpoints, servers, email, web gateways, cloud workloads, and other important assets where feasible.
+- [ ] Keep detection tools, signatures, policies, and telemetry sources current.
+- [ ] Review alerts and tune detection logic based on incidents, exercises, and threat intelligence.
 
-### 4.C Deploy Security.txt
-- [ ] Place RFC 9116-compliant `security.txt` on all public web domains.  
+### 4.B Identify Adverse Events
+
+- [ ] Define adverse cybersecurity events that require triage, escalation, investigation, or incident declaration.
+- [ ] Establish alerting and monitoring for suspicious authentication, malware, privilege abuse, lateral movement, data exfiltration, service disruption, and OT anomalies.
+- [ ] Assign responsibility for reviewing, triaging, and escalating adverse events.
+
+### 4.C Collect Security Logs
+
+- [ ] Collect access and security logs from identity providers, endpoints, servers, firewalls, VPNs, cloud services, network devices, and critical applications.
+- [ ] Collect or otherwise monitor network activity for important OT assets that cannot generate adequate host logs.
+- [ ] Ensure logs support investigation of authentication, administrative activity, configuration changes, and security events.
+
+### 4.D Store Logs Securely
+
+- [ ] Store logs in a centralized or protected location such as a SIEM, log platform, or access-controlled repository.
+- [ ] Restrict log access to authorized personnel.
+- [ ] Retain logs based on legal, regulatory, operational, and investigation needs.
 
 ---
 
-## 5. RECOVER
+## 5. RESPOND
 
-### 5.A Incident Planning & Preparedness
-- [ ] Develop, maintain, and test recovery plans for mission-critical systems.  
+### 5.A Establish Incident Communication Procedures
+
+- [ ] Define internal and external communication procedures for cybersecurity incidents.
+- [ ] Include executive leadership, legal, privacy, communications, IT, OT, business owners, cyber insurance, vendors, regulators, customers, and CISA where applicable.
+- [ ] Maintain current contact lists and escalation paths.
+
+### 5.B Maintain Incident Response Plans
+
+- [ ] Maintain incident response plans for likely scenarios such as ransomware, business email compromise, credential theft, data exposure, vendor compromise, and OT disruption.
+- [ ] Test incident response plans at least annually through tabletop exercises, drills, or simulations.
+- [ ] Update plans after incidents, exercises, and material business or technology changes.
+
+### 5.C Report Incidents
+
+- [ ] Maintain a policy defining when, how, and to whom cybersecurity incidents are reported.
+- [ ] Include CISA, regulators, law enforcement, sector partners, insurers, vendors, customers, and other required parties where applicable.
+- [ ] Document reporting decisions, timing, and responsible roles.
+
+### 5.D Maintain Vulnerability Disclosure and Reporting
+
+- [ ] Provide a discoverable method for external researchers, customers, vendors, and partners to report vulnerabilities.
+- [ ] Acknowledge, triage, remediate, and communicate about valid vulnerability reports using a defined process.
+- [ ] Provide safe harbor language where appropriate and approved by legal counsel.
+
+---
+
+## 6. RECOVER
+
+### 6.A Maintain Recovery Plans
+
+- [ ] Develop and maintain recovery plans for mission-critical systems, data, services, configurations, vendors, and operational processes.
+- [ ] Align recovery plans with business impact, safety, legal obligations, and dependency mapping.
+- [ ] Review recovery plans after incidents, exercises, and major environment changes.
+
+### 6.B Exercise Recovery Plans
+
+- [ ] Exercise recovery plans on a recurring cadence using realistic disruption scenarios.
+- [ ] Include leadership, IT, OT, business owners, communications, legal, privacy, and key vendors where applicable.
+- [ ] Track lessons learned through remediation or documented risk acceptance.
 
 ---
 
 ## Sign-Off
 
-- [ ] Technical Review — NAME / DATE  
-- [ ] Security Review — NAME / DATE  
-- [ ] Compliance Review — NAME / DATE  
-- [ ] Executive Sponsor — NAME / DATE 
+- [ ] Technical Review - NAME / DATE
+- [ ] Security Review - NAME / DATE
+- [ ] Compliance Review - NAME / DATE
+- [ ] Executive Sponsor - NAME / DATE
