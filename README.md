@@ -1,19 +1,29 @@
 # Security, Privacy, and Governance Toolkit
 
-An open, practical toolkit for cybersecurity, privacy, governance, risk management, and security program improvement.
+Security work can get complicated quickly. This repository is meant to make the starting point a little calmer: clear checklists, practical language, and a lightweight way to turn trusted public guidance into work a team can actually track.
 
-This repository is designed to help organizations turn public cybersecurity guidance into usable assessment and remediation artifacts. It focuses on modern security governance practices aligned with **NIST Cybersecurity Framework 2.0**, **CISA Cybersecurity Performance Goals**, and privacy risk management principles.
+The project focuses on cybersecurity governance, privacy, risk management, and security program improvement. It is currently centered on the **CISA Cybersecurity Performance Goals** and the **NIST Cybersecurity Framework 2.0**, with an emphasis on controls that are useful for real organizations rather than shelfware.
 
-## What This Project Helps With
+## Why This Exists
+
+Many teams know they should improve security, but the first question is often simply: where do we begin?
+
+This repository is for that moment. It helps teams look at their environment, identify gaps, collect evidence, and decide what needs action, ownership, funding, or risk acceptance.
+
+## What You Can Use It For
 
 - Assess cybersecurity and privacy program maturity.
 - Track security control gaps and remediation work.
-- Align security work with NIST CSF 2.0 functions: Govern, Identify, Protect, Detect, Respond, and Recover.
+- Align security efforts with NIST CSF 2.0: Govern, Identify, Protect, Detect, Respond, and Recover.
 - Translate CISA Cybersecurity Performance Goals into practical action items.
-- Improve governance, risk management, evidence collection, and accountability.
-- Support security, IT, privacy, legal, compliance, and executive stakeholders.
+- Improve evidence collection, accountability, and governance conversations.
+- Support security, IT, privacy, legal, compliance, operations, and executive stakeholders.
 
-## Who This Is For
+## Who It Is For
+
+This toolkit is designed to be approachable for organizations that need useful security guidance without a heavy enterprise GRC platform.
+
+It may be especially helpful for:
 
 - Small and medium businesses.
 - Nonprofits and community organizations.
@@ -21,6 +31,20 @@ This repository is designed to help organizations turn public cybersecurity guid
 - Schools, clinics, and critical-service providers.
 - Security consultants, auditors, and volunteers.
 - Security teams building lightweight governance, risk, and compliance programs.
+
+## Start Here
+
+The main checklist is here:
+
+- [CISA Cross-Sector Cybersecurity Performance Goals Checklist](cisa/cisa_cpg_checklist_markdown)
+
+As you review the checklist, try to answer five practical questions:
+
+1. What systems, data, vendors, and business processes are in scope?
+2. Who owns each security or privacy risk?
+3. Which controls are implemented, missing, or unverified?
+4. What evidence shows that a control is actually working?
+5. Which gaps need remediation, risk acceptance, or leadership review?
 
 ## Topics Covered
 
@@ -36,16 +60,6 @@ This repository is designed to help organizations turn public cybersecurity guid
 - Third-party and supply chain risk
 - Evidence collection and remediation tracking
 
-## Recommended Starting Point
-
-Use this repository as a starting point for answering practical security questions:
-
-1. What systems, data, vendors, and business processes are in scope?
-2. Who owns each security and privacy risk?
-3. Which controls are implemented, missing, or unverified?
-4. What evidence proves that a control is working?
-5. Which gaps need remediation, risk acceptance, or leadership review?
-
 ## Status Vocabulary
 
 Use consistent status values when tracking controls:
@@ -60,9 +74,11 @@ Use consistent status values when tracking controls:
 | Not applicable | The control does not apply to the defined scope. |
 | Risk accepted | Leadership has accepted residual risk for a defined period. |
 
-## Evidence Expectations
+## Evidence Matters
 
-A control should not be marked `Implemented` without evidence. Useful evidence may include policies, screenshots, configuration exports, tickets, logs, test results, vendor attestations, access reviews, incident records, backup restore results, and signed risk acceptance records.
+A control should not be marked `Implemented` just because it sounds familiar or exists somewhere in policy. Good evidence may include screenshots, configuration exports, tickets, logs, test results, vendor attestations, access reviews, incident records, backup restore results, or signed risk acceptance records.
+
+The goal is not paperwork for its own sake. The goal is to make security decisions easier to explain, repeat, and improve.
 
 ## Framework Alignment
 
@@ -73,9 +89,9 @@ This project is intended to support practical alignment with:
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 - [CISA Secure by Design](https://www.cisa.gov/securebydesign)
 
-## Suggested GitHub Repository Description
+## About
 
-Open cybersecurity, privacy, and governance toolkit aligned to NIST CSF 2.0, CISA CPGs, GRC, incident response, vulnerability management, and security risk assessment.
+This repository is maintained as part of broader security, privacy, and governance work by [Leo Nelson](https://leonelson.com).
 
 ## Suggested GitHub Topics
 
